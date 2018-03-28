@@ -1,0 +1,102 @@
+<html>
+<head>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<meta charset=utf-8 />
+
+<script>
+function upload(){
+var fileupld=document.getElementById("fileupld").value;
+var fu=/([a-zA-Z0-9\s_\\.\-:])+(.png|.jpg|.gif)$/;
+if((!fu.test(fileupld)))
+{
+	alert("please upload image file");
+	return false;
+}
+}
+</script>
+<style>
+h1 {
+    color: white;
+    text-align: center;
+}
+h2{
+padding-left: 35em;
+}
+q {
+font-family: verdana;
+font-style: italic;
+    font-size: 15px;
+}
+body {
+background-image: url("bg.jpg");
+}
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+
+</head>
+</style>
+<script>
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+<body>
+<center>
+<div class="topnav">
+<q><h1>Captcha as Graphical Passwords-A New Security Primitive Based on Hard AI Problems</h1></q>
+<br/><br/><br/><h1>USER LOGIN</h1>
+<h1>STEP2</h2>
+  <a class="active1" href="file1.html">Home</a>
+  <a class="active1" href="file5.html">Register</a>
+  <a class="active" href="file3.html">User login</a>
+  <a class="active3" href="file4.html">Administrator login</a>  
+ </div>
+</center>
+<form action="user_upload.jsp" onsubmit="return upload()">
+<br><br><br>&emsp;&emsp;<input type="file" id="fileupld" accept="image/*" onchange="readURL(this);">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<img id="blah" src="face.png" alt="your image" />
+  <br><br><br><br><br><br>
+<center><input type="submit" value="submit"></center>
+</form>
+</body>
+</html>

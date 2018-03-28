@@ -1,0 +1,98 @@
+<html>
+<head>
+<script>
+function validationForm()
+{
+var un = document.forms["myForm"]["un"].value;
+var pwd = document.forms["myForm"]["pwd"].value;
+var forun = /[A-Za-z0-9]/;
+var forpwd = /[A-Za-z0-9]/;
+if(un == null||un == "")
+{
+	alert("please enter username..");
+	return false;
+}
+if(pwd == null||pwd == "")
+{
+	alert("please enter password..");
+	return false;
+}
+if(!(forun.test("un")))
+{
+	alert("enter valid username..");
+	return false;
+}
+if(!(forpwd.test("pwd")))
+{
+	alert("enter a valid password..");
+	return false;
+}
+}
+</script>
+<style>
+h1 {
+    color: white;
+    text-align: center;
+}
+
+q {
+font-family: verdana;
+font-style: italic;
+    font-size: 15px;
+}
+body {
+background-image: url("bg.jpg");
+}
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body {
+background-image: url("login1.jpg");
+}
+
+</head>
+</style>
+<body>
+<center>
+<div class="topnav">
+<q><h1>Captcha as Graphical Passwords-A New Security Primitive Based on Hard AI Problems</h1></q>
+<br/><br/><br/><h1>ADMINISTRATOR LOGIN<h1/>
+  <a class="active1" href="file1.html">Home</a>
+  <a class="active2" href="file2.html">Register</a>
+  <a class="active3" href="file3.html">User login</a>
+  <a class="active" href="file4.html">Administrator login</a>
+ </div>
+<form name="myForm" action="file.html" onsubmit="return validationForm()">
+<br/><br/><br/><br/>
+username:<input type="text" id="un" placeholder="Enter username.."><br/><br/>
+password:<input type="password" id="pwd" placeholder="Enter password.."><br/><br/>
+<input type="submit" value="Submit"><br/><br/>
+<input type="reset" value="reset">
+</center>
+</form>
+</body>
+</html>
